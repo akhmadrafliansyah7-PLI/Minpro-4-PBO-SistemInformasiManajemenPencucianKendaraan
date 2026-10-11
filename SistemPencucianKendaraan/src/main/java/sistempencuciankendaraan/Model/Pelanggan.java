@@ -28,12 +28,14 @@ public class Pelanggan {
         this.idPelanggan = String.format("PL%03d", counter);
         this.nama = nama;
         this.noTelepon = "-";
-    
     }
     public Pelanggan(String idPelanggan, String nama, String noTelepon){
         this.idPelanggan = idPelanggan;
         this.nama = nama;
         this.noTelepon = noTelepon;
+    }
+    public static void setCounter(int nilai){
+    counter = nilai;
     }
     public String getIdPelanggan(){
         return idPelanggan;

@@ -95,6 +95,9 @@ public void tambahData(){
             System.out.println("Nomor Telepon hanya boleh berisi angka!");
         }
     }
+    int nomorPelanggan = transaksiDAO.getNomorPelangganTersedia();
+    Pelanggan.setCounter(nomorPelanggan - 1);
+    
     Pelanggan pelanggan;
     if (noTelepon.isEmpty()){
         pelanggan = new Pelanggan(nama);
@@ -179,6 +182,9 @@ public void tambahData(){
         }
         kendaraan = new Mobil(noPlat, merk, warna, jumlahRoda, layanan);
        
+        int nomorTersedia = transaksiDAO.getNomorTersedia();
+        Transaksi.setCounter(nomorTersedia - 1);
+        
         Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 
         transaksiDAO.tambah(transaksi);
@@ -233,6 +239,9 @@ public void tambahData(){
                 }
             }
             kendaraan = new Motor(noPlat, merk, warna, cc, layanan);
+            
+            int nomorTersedia = transaksiDAO.getNomorTersedia();
+            Transaksi.setCounter(nomorTersedia - 1);
             
             Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 

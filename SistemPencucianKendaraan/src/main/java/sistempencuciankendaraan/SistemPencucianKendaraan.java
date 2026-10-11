@@ -5,8 +5,6 @@
 package sistempencuciankendaraan;
 
 import sistempencuciankendaraan.Controller.MenuController;
-import sistempencuciankendaraan.DAO.TransaksiDAO;
-import sistempencuciankendaraan.Model.Transaksi;
 import sistempencuciankendaraan.View.MenuView;
 /**
  *
@@ -18,9 +16,6 @@ public class SistemPencucianKendaraan {
         
         MenuView View = new MenuView();
         MenuController Controller = new MenuController(View);
-        
-        TransaksiDAO transaksiDAO = new TransaksiDAO();
-        Transaksi.setCounter(transaksiDAO.getNomorTerakhir());
         
         Controller.jalankanProgram();
     }

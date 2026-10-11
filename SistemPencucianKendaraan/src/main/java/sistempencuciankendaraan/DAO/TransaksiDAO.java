@@ -285,25 +285,66 @@ public class TransaksiDAO {
 
         return null;
     }
-    public int getNomorTerakhir() {
-    String sql = "SELECT id_transaksi FROM pencucian "
-               + "ORDER BY CAST(SUBSTRING(id_transaksi, 3) AS UNSIGNED) DESC "
-               + "LIMIT 1";
+    public int getNomorTersedia() {
+        String sql = "SELECT id_transaksi FROM pencucian "
+                   + "ORDER BY CAST(SUBSTRING(id_transaksi, 3) AS UNSIGNED) ASC";
 
-    try (
-        Connection conn = Koneksi.getConnection();
-        PreparedStatement ps = conn.prepareStatement(sql);
-        ResultSet rs = ps.executeQuery()
-    ) {
-        if (rs.next()) {
-            String id = rs.getString("id_transaksi");
-            return Integer.parseInt(id.substring(2));
+        try (
+            Connection conn = Koneksi.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery()
+        ) {
+            int nomor = 1;
+
+            while (rs.next()) {
+                String id = rs.getString("id_transaksi");
+                int nomorDatabase = Integer.parseInt(id.substring(2));
+
+                if (nomorDatabase == nomor) {
+                    nomor++;
+                } else if (nomorDatabase > nomor) {
+                    break;
+                }
+            }
+
+            return nomor;
+
+        } catch (SQLException e) {
+            System.out.println("Gagal mencari ID transaksi tersedia: "
+                    + e.getMessage());
         }
-    } catch (SQLException e) {
-        System.out.println("Gagal mengambil ID transaksi terakhir: "
-                + e.getMessage());
-    }
 
-    return 0;
-}
+        return 1;
+    }
+    public int getNomorPelangganTersedia() {
+        String sql = "SELECT id_pelanggan FROM pencucian "
+                   + "ORDER BY CAST(SUBSTRING(id_pelanggan, 3) AS UNSIGNED) ASC";
+
+        try (
+            Connection conn = Koneksi.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery()
+        ) {
+            int nomor = 1;
+
+            while (rs.next()) {
+                String id = rs.getString("id_pelanggan");
+                int nomorDatabase = Integer.parseInt(id.substring(2));
+
+                if (nomorDatabase == nomor) {
+                    nomor++;
+                } else if (nomorDatabase > nomor) {
+                    break;
+                }
+            }
+
+            return nomor;
+
+        } catch (SQLException e) {
+            System.out.println("Gagal mencari ID pelanggan tersedia: "
+                    + e.getMessage());
+        }
+
+        return 1;
+    }
 }
