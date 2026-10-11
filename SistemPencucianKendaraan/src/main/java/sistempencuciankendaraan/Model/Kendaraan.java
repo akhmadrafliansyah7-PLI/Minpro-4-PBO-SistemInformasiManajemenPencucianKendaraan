@@ -54,5 +54,8 @@ public abstract class Kendaraan {
     public abstract void tampilkanData();
     
     public abstract BisaDicuci getBisaDicuci();
+    public abstract String getJenisKendaraan();
+    public abstract int getJumlahRoda();
+    public abstract int getcc();
 }
 

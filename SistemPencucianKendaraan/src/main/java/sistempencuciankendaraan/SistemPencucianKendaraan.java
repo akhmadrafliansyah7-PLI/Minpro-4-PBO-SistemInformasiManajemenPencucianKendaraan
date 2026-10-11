@@ -4,6 +4,9 @@
  */
 package sistempencuciankendaraan;
 
+import sistempencuciankendaraan.Controller.MenuController;
+import sistempencuciankendaraan.DAO.TransaksiDAO;
+import sistempencuciankendaraan.Model.Transaksi;
 /**
  *
  * @author Lenovo GK
@@ -18,7 +21,9 @@ public class SistemPencucianKendaraan {
         MenuView View = new MenuView();
         MenuController Controller = new MenuController(View);
         
-        Controller.dataDummy();
+        TransaksiDAO transaksiDAO = new TransaksiDAO();
+        Transaksi.setCounter(transaksiDAO.getNomorTerakhir());
+        
         Controller.jalankanProgram();
     }
 }

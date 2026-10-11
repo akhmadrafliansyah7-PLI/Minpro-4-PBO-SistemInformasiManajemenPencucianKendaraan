@@ -15,6 +15,13 @@ public class Motor extends Kendaraan implements BisaDicuci{
     public Motor(String noPlat, String merk, String warna, int cc, Layanan layanan){
         super(noPlat, merk, warna, layanan);
         this.cc = cc;
+        
+    }
+    public int getJumlahRoda(){
+        return 0;
+    }
+    public int getcc(){
+        return cc;
     }
     @Override
     public void cuci(){
@@ -22,6 +29,10 @@ public class Motor extends Kendaraan implements BisaDicuci{
     }
     @Override public BisaDicuci getBisaDicuci(){
         return this;
+    }
+    @Override 
+    public String getJenisKendaraan(){
+        return "motor";
     }
     @Override
     public void tampilkanData(){

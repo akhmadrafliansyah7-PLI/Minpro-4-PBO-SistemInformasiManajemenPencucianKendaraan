@@ -16,12 +16,23 @@ public class Mobil extends Kendaraan implements BisaDicuci{
         super(noPlat, merk, warna, layanan);
         this.jumlahRoda = jumlahRoda;
     } 
+    public int getJumlahRoda(){
+        return jumlahRoda;
+    }
+    public int getcc(){
+        return 0;
+    }
     @Override
     public void cuci(){
         System.out.println("Mobil sedang dicuci"); 
     }
-    @Override public BisaDicuci getBisaDicuci(){
+    @Override 
+    public BisaDicuci getBisaDicuci(){
         return this;
+    }
+    @Override 
+    public String getJenisKendaraan(){
+        return "mobil";
     }
     @Override
     public void tampilkanData(){

@@ -4,8 +4,8 @@
  */
 package sistempencuciankendaraan.Controller;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+import sistempencuciankendaraan.DAO.TransaksiDAO;
 import sistempencuciankendaraan.Model.BisaDicuci;
 import sistempencuciankendaraan.Model.Kendaraan;
 import sistempencuciankendaraan.Model.Layanan;
@@ -20,41 +20,12 @@ import sistempencuciankendaraan.View.MenuView;
  */
 public class MenuController {
     
-    private ArrayList<Transaksi> daftarTransaksi;
     private MenuView view;
     private Scanner input = new Scanner(System.in);
+    private  TransaksiDAO transaksiDAO = new TransaksiDAO();
     
     public MenuController(MenuView view){
         this.view = view;
-        this.daftarTransaksi = new ArrayList<>();
-    }
-    public void dataDummy(){
-        Pelanggan pelanggan = new Pelanggan(
-            "Rapli",
-            "08969074431"
-        );
-        
-        Layanan layanan = new Layanan(
-            "LY001",
-            "Cuci Reguler Mobil",
-            50000
-        );
-         
-        Kendaraan kendaraan = new Mobil(
-            "KT0897",
-            "Honda",
-            "Putih",
-            4,
-            layanan
-        );
-       
-        Transaksi transaksi = new Transaksi(
-            pelanggan,
-            kendaraan,
-            layanan
-        );
-        
-daftarTransaksi.add(transaksi);
     }
     public void jalankanProgram(){
         
@@ -210,7 +181,7 @@ public void tambahData(){
        
         Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 
-        daftarTransaksi.add(transaksi);
+        transaksiDAO.tambah(transaksi);
 
         System.out.println("\nData Pencucian Berhasil Ditambahkan!");
         break;
@@ -265,7 +236,7 @@ public void tambahData(){
             
             Transaksi transaksi = new Transaksi(pelanggan, kendaraan, layanan);
 
-            daftarTransaksi.add(transaksi);
+            transaksiDAO.tambah(transaksi);
 
             System.out.println("\nData Pencucian Berhasil Ditambahkan!");
         break;  
@@ -275,18 +246,9 @@ public void tambahData(){
     }
 }
 public void tampilkanData(){
-
-    if(daftarTransaksi.isEmpty()){
-        System.out.println("Belum Ada Data Pencucian");
-        return;
-    }
+    
     System.out.println("\n=== Data Pencucian Kendaraan ===");
-    for (Transaksi transaksi : daftarTransaksi){
-        transaksi.tampilkanData();
-
-System.out.println("---------------------------------");
-        
-    }
+    transaksiDAO.tampilkanSemua();
 }
 public void ubahData(){
 
@@ -295,9 +257,9 @@ public void ubahData(){
     System.out.println("Masukan ID Transaksi: ");
     String idTransaksi = input.nextLine();
 
-    for (Transaksi transaksi : daftarTransaksi){
+    Transaksi transaksi = transaksiDAO.cariById(idTransaksi);
 
-        if(transaksi.getIdTransaksi().equals(idTransaksi)) {
+        if(transaksi != null) {
 
                         System.out.print("Nama Pelanggan Baru: ");
                         String nama = input.nextLine();
@@ -455,6 +417,7 @@ transaksi.getPelanggan().setNoTelepon(noTelepon);
                                 kendaraanBaru = new Motor(noPlat, merk, warna, cc, layananBaru2);
                                 transaksi.setKendaraan(kendaraanBaru);
                                 transaksi.setLayanan(layananBaru2);
+
                             
                             break;
 
@@ -462,11 +425,12 @@ transaksi.getPelanggan().setNoTelepon(noTelepon);
                                 System.out.println("Pilihan Layanan Tidak Valid! pilih 1-2.");
                             }
                         }
+                    transaksiDAO.ubah(transaksi);
                     System.out.print("\nData Berhasil Diubah");
-                    return;
-                }
+                }else{
+                    System.out.println("ID Transaksi Tidak Ditemukan.");
             }
-            System.out.println("ID Transaksi Tidak Ditemukan.");
+                
         }
 
 public void prosesPencucian(){
@@ -476,11 +440,11 @@ public void prosesPencucian(){
     System.out.println("Masukan ID Transaksi: ");
     String idTransaksi = input.nextLine();
 
-    for (Transaksi transaksi : daftarTransaksi){
+    Transaksi transaksi = transaksiDAO.cariById(idTransaksi);
 
-        if(transaksi.getIdTransaksi().equals(idTransaksi)) {
+        if(transaksi!= null) {
             
-System.out.println("\n--- Data Pencucian ---");
+            System.out.println("\n--- Data Pencucian ---");
 System.out.println("---------------------------");
             
             Kendaraan kendaraan = transaksi.getKendaraan();
@@ -516,9 +480,8 @@ System.out.println("---------------------------");
             }
             return;   
         }     
+        System.out.println("ID Transaksi Tidak Ditemukan.");
     }
-    System.out.println("ID Transaksi Tidak Ditemukan.");
-}
 
 public void hapusData(){
 
@@ -526,18 +489,17 @@ public void hapusData(){
 
     System.out.println("Masukan ID Transaksi");
     String idTransaksi = input.nextLine();
+    
+    Transaksi transaksi = transaksiDAO.cariById(idTransaksi);
 
-    for (int i = 0; i < daftarTransaksi.size(); i++) {
+        if (transaksi != null) {
 
-        if (daftarTransaksi.get(i).getIdTransaksi().equals(idTransaksi)) {
-
-            daftarTransaksi.remove(i);
-
+    transaksiDAO.hapus(idTransaksi);
             System.out.println("\nData Berhasil Dihapus");
-            return;
+            
+        }else{
+            System.out.println("ID Transaksi Tidak Ditemukan.");
         }
     }
-
-    System.out.println("ID Transaksi Tidak Ditemukan.");
-}
+    
 }

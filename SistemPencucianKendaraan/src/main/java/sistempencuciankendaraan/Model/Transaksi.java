@@ -28,6 +28,15 @@ public class Transaksi {
         this.kendaraan = kendaraan;
         this.layanan = layanan;
     }
+    public Transaksi(String idTransaksi, Pelanggan pelanggan, Kendaraan kendaraan, Layanan layanan){
+        this.idTransaksi = idTransaksi;
+        this.pelanggan = pelanggan;
+        this.kendaraan = kendaraan;
+        this.layanan = layanan;
+    }
+    public static void setCounter(int nilai){
+        counter = nilai;
+    }
     
     public String getIdTransaksi(){
         return idTransaksi;
