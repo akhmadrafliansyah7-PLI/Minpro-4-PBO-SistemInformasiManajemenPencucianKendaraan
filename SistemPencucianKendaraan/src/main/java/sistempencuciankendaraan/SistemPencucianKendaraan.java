@@ -7,13 +7,11 @@ package sistempencuciankendaraan;
 import sistempencuciankendaraan.Controller.MenuController;
 import sistempencuciankendaraan.DAO.TransaksiDAO;
 import sistempencuciankendaraan.Model.Transaksi;
+import sistempencuciankendaraan.View.MenuView;
 /**
  *
  * @author Lenovo GK
  */
-import sistempencuciankendaraan.View.MenuView;
-import sistempencuciankendaraan.Controller.MenuController;
-
 public class SistemPencucianKendaraan {
     
     public static void main(String[] args){

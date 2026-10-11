@@ -276,14 +276,6 @@ public void ubahData(){
                                 System.out.println("Nomor Telepon hanya boleh berisi angka!");
                             }
                         }
-                        
-                        Pelanggan pelanggan;
-                        
-                        if (noTelepon.isEmpty()){
-                            pelanggan = new Pelanggan(nama);
-                        }else{
-                            pelanggan = new Pelanggan(nama, noTelepon);
-                        }
 
 transaksi.getPelanggan().setNama(nama);
 transaksi.getPelanggan().setNoTelepon(noTelepon);

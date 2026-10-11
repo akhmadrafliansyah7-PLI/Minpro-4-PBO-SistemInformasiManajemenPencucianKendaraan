@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package sistempencuciankendaraan.Model;
-
-import sistempencuciankendaraan.Model.Layanan;
 /**
  *
  * @author Lenovo GK

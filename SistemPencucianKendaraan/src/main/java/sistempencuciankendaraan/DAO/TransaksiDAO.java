@@ -237,6 +237,7 @@ public class TransaksiDAO {
                 if (rs.next()) {
 
                     Pelanggan pelanggan = new Pelanggan(
+                        rs.getString("id_pelanggan"),
                         rs.getString("nama_pelanggan"),
                         rs.getString("no_telepon")
                     );

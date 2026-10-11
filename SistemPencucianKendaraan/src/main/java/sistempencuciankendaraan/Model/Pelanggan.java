@@ -30,6 +30,11 @@ public class Pelanggan {
         this.noTelepon = "-";
     
     }
+    public Pelanggan(String idPelanggan, String nama, String noTelepon){
+        this.idPelanggan = idPelanggan;
+        this.nama = nama;
+        this.noTelepon = noTelepon;
+    }
     public String getIdPelanggan(){
         return idPelanggan;
     }
