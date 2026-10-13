@@ -28,8 +28,7 @@ memiliki fungsi masing-masing.
 - Package sistempencuciankendaraan.Model Berisi class yang merepresentasikan data dan objek utama dalam sistem, seperti pelanggan,         kendaraan, layanan, dan transaksi. Di dalamnya juga terdapat penerapan konsep OOP seperti inheritance, polymorphism, abstraction,        encapsulation, dan interface.
 - Package sistempencuciankendaraan.View Berisi MenuView yang bertugas menangani tampilan menu dan input menu dari pengguna. Jadi bagian    ini berhubungan dengan interaksi pengguna dengan program.
 - Package sistempencuciankendaraan.DAO Berisi TransaksiDAO yang menangani akses dan operasi data ke database, seperti INSERT, SELECT,      UPDATE, dan DELETE. Karena proyekmu menggunakan JDBC, proses SQL dilakukan di bagian ini.
-- Package sistempencuciankendaraan.Database
-- Berisi Koneksi yang bertugas membuat koneksi antara aplikasi Java dengan database MySQL.
+- Package sistempencuciankendaraan.Database Berisi Koneksi yang bertugas membuat koneksi antara aplikasi Java dengan database MySQL.
 
 Secara keseluruhan, pembagian tersebut menggunakan pola MVC (Model–View–Controller), yaitu Model untuk mengelola data, View untuk 
 tampilan dan input, sedangkan Controller untuk mengatur proses dan alur program.
@@ -117,7 +116,7 @@ Abstraction diterapkan melalui class Kendaraan yang menyediakan atribut dan meth
 
 <img width="346" height="16" alt="Screenshot 2026-10-07 103501" src="https://github.com/user-attachments/assets/2857cbb5-1fb5-4bf9-ad1d-fca79ff87e25" />
 
-#Penerapan JDBC
+# Penerapan JDBC
 
 Salah satu contoh penerapan JDBC pada sistem ditunjukkan pada proses penyimpanan data pencucian ke dalam database. Pada kode tersebut, Connection digunakan untuk menghubungkan program dengan database melalui Koneksi.getConnection(), sedangkan PreparedStatement digunakan untuk menyiapkan perintah SQL dan memasukkan data menggunakan ps.setString(), ps.setInt(), dan ps.setDouble(). Selanjutnya, ps.executeUpdate() digunakan untuk menjalankan perintah SQL sehingga data dapat disimpan ke dalam database.
 
