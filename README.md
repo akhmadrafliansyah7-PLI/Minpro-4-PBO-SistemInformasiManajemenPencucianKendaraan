@@ -30,8 +30,7 @@ memiliki fungsi masing-masing.
 - Package sistempencuciankendaraan.DAO Berisi TransaksiDAO yang menangani akses dan operasi data ke database, seperti INSERT, SELECT,      UPDATE, dan DELETE. Karena proyekmu menggunakan JDBC, proses SQL dilakukan di bagian ini.
 - Package sistempencuciankendaraan.Database Berisi Koneksi yang bertugas membuat koneksi antara aplikasi Java dengan database MySQL.
 
-Secara keseluruhan, pembagian tersebut menggunakan pola MVC (Model–View–Controller), yaitu Model untuk mengelola data, View untuk 
-tampilan dan input, sedangkan Controller untuk mengatur proses dan alur program.
+<img width="396" height="523" alt="image" src="https://github.com/user-attachments/assets/e699afbf-611a-4ff2-bd41-e497641c77b7" />
 
 # Penjelasan Alur Program
 
