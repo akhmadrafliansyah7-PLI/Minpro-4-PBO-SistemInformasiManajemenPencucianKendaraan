@@ -44,7 +44,7 @@ proses pencucisn, dan keluar dari program. Pengguna dapat memilih salah satu men
    
    Pada menu **Tambah Data Pencucian**, pengguna memilih menu 1, yaitu Tambah Data Pencucian. Pengguna kemudian memasukkan nama             pelanggan, nomor telepon, nomor plat, merk, dan warna kendaraan. Setelah itu, pengguna memilih jenis kendaraan, yaitu mobil atau         motor. Pada contoh tersebut dipilih mobil, sehingga pengguna memasukkan jumlah roda sebanyak 4. Selanjutnya, pengguna memilih layanan    pencucian, yaitu cuci reguler atau cuci premium; pada contoh dipilih Cuci Premium Mobil dengan harga Rp75.000. Setelah seluruh data      dan layanan dipilih, sistem membuat data transaksi dan menampilkan pesan "Data Berhasil disimpan ke Database" dan “Data Pencucian        Berhasil Ditambahkan!”, yang menandakan data berhasil disimpan ke dalam database dan sistem.
    
-  <img width="273" height="582" alt="image" src="https://github.com/user-attachments/assets/5ca6a6e2-4d38-4e7a-8ec2-1358aa1124f6" />
+     <img width="273" height="582" alt="image" src="https://github.com/user-attachments/assets/5ca6a6e2-4d38-4e7a-8ec2-1358aa1124f6" />
 
 
 2. Tampilkan Data Pencucian
