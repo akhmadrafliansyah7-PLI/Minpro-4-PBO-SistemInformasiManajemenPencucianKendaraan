@@ -50,38 +50,33 @@ proses pencucisn, dan keluar dari program. Pengguna dapat memilih salah satu men
 
 2. Tampilkan Data Pencucian
 
-   Pada menu **Tampilkan Data Pencucian**, sistem akan memeriksa apakah terdapat data transaksi di dalam database. Jika belum terdapat data,
-   sistem akan menampilkan informasi bahwa belum ada data pencucian. Jika terdapat data, sistem menggunakan perulangan untuk mengambil setiap
-   transaksi dan menampilkan informasi transaksi, pelanggan, kendaraan, serta layanan yang dipilih.
+   Pada menu **Tampilkan Data Pencucian**, sistem akan memeriksa apakah terdapat data transaksi di dalam database. Jika belum terdapat      data, sistem akan menampilkan informasi bahwa belum ada data pencucian. Jika terdapat data, sistem menggunakan perulangan untuk          mengambil setiap transaksi dan menampilkan informasi transaksi, pelanggan, kendaraan, serta layanan yang dipilih.
 
    <img width="247" height="474" alt="image" src="https://github.com/user-attachments/assets/a6e31371-47ff-4236-a02a-e8f86d74279a" />
 
 3. Ubah Data Pencucian
 
-   Pada menu **Ubah Data Pencucian**, pengguna dapat memperbarui data transaksi yang sudah tersimpan dengan memasukkan ID transaksi yang    ingin diubah. Data yang dapat diperbarui meliputi informasi pelanggan, kendaraan, jenis kendaraan, serta layanan pencucian. Setelah      seluruh data baru dimasukkan, sistem akan memperbarui transaksi dan menampilkan pemberitahuan bahwa data berhasil diubah.
+   Pada menu **Ubah Data Pencucian**, pengguna dapat memperbarui data transaksi yang sudah tersimpan dengan memasukkan ID transaksi yang    ingin diubah. Data yang dapat diperbarui meliputi informasi pelanggan, kendaraan, jenis kendaraan, serta layanan pencucian. Setelah      seluruh data baru dimasukkan, sistem akan memperbarui transaksi dan menampilkan pemberitahuan bahwa data berhasil diubah di database.
 
-    <img width="260" height="629" alt="Screenshot 2026-10-07 095845" src="https://github.com/user-attachments/assets/13151e38-e46b-4362-adf0-ab2a071589b0" />
+   <img width="259" height="610" alt="image" src="https://github.com/user-attachments/assets/a3148f4b-a6c3-4c9d-9cc4-9de74fd2fd47" />
 
 4. Hapus Data Pencucian
 
-   Pada menu **Hapus Data Pencucian**, pengguna memasukkan ID transaksi yang ingin dihapus. Sistem mencari transaksi berdasarkan ID tersebut.
-   Jika transaksi ditemukan, data akan dihapus dari `ArrayList`. Jika ID tidak ditemukan, sistem akan menampilkan pesan bahwa data tidak             ditemukan.
+   Pada menu **Hapus Data Pencucian**, pengguna memasukkan ID transaksi yang ingin dihapus. Sistem mencari transaksi berdasarkan ID         tersebut. Jika transaksi ditemukan, data akan dihapus dari Dtabase. Jika ID tidak ditemukan, sistem akan menampilkan pesan bahwa data    tidak ditemukan.
 
-   <img width="247" height="296" alt="Screenshot 2026-10-07 101218" src="https://github.com/user-attachments/assets/273fbe8b-a517-4911-a31c-38b33e2af678" />
+   <img width="266" height="319" alt="image" src="https://github.com/user-attachments/assets/684a79d2-813d-426b-883c-e2a79edcfe66" />
 
 5. Proses Pencucian
 
-   Pada menu **Proses Pencucian**, pengguna memasukkan ID transaksi yang akan diproses. Sistem kemudian menampilkan data pencucian dari transaksi    tersebut, seperti informasi kendaraan, layanan, dan harga. Setelah pengguna mengonfirmasi proses pencucian, sistem menampilkan bahwa kendaraan    sedang dicuci dan memberikan informasi bahwa proses sedang berlangsung hingga akhirnya menampilkan pesan “Pencucian Selesai”.
+   Pada menu **Proses Pencucian**, pengguna memasukkan ID transaksi yang akan diproses. Sistem kemudian menampilkan data pencucian dari     transaksi    tersebut, seperti informasi kendaraan, layanan, dan harga. Setelah pengguna mengonfirmasi proses pencucian, sistem          menampilkan bahwa kendaraan    sedang dicuci dan memberikan informasi bahwa proses sedang berlangsung hingga akhirnya menampilkan        pesan “Pencucian Selesai”.
 
-   <img width="311" height="522" alt="Screenshot 2026-10-07 101507" src="https://github.com/user-attachments/assets/85808da0-3b00-4663-b919-ce798cf36384" />
+   <img width="312" height="517" alt="image" src="https://github.com/user-attachments/assets/bdfc0efe-e556-4570-adeb-bbefd1b1ee07" />
 
 6. Keluar Dari Program
 
-   Setelah setiap proses selesai, program kembali menampilkan menu utama sehingga pengguna dapat memilih proses lainnya. Program akan terus
-   berjalan selama pengguna belum memilih menu **Keluar**. Ketika pengguna memilih menu keluar, program akan menampilkan pesan bahwa program
-   selesai dan menghentikan proses.
+   Setelah setiap proses selesai, program kembali menampilkan menu utama sehingga pengguna dapat memilih proses lainnya. Program akan       terus berjalan selama pengguna belum memilih menu **Keluar**. Ketika pengguna memilih menu keluar, program akan menampilkan pesan        bahwa program selesai dan menghentikan proses.
 
-   <img width="517" height="306" alt="Screenshot 2026-10-07 101739" src="https://github.com/user-attachments/assets/7e4732fd-4b69-467c-a25d-da89df582a13" />
+   <img width="530" height="316" alt="image" src="https://github.com/user-attachments/assets/ff00b373-0717-443a-9b50-099d4d4f1150" />
 
 # Penerapan Encapsulation
 
@@ -121,3 +116,12 @@ Abstraction diterapkan melalui class Kendaraan yang menyediakan atribut dan meth
 
 
 <img width="346" height="16" alt="Screenshot 2026-10-07 103501" src="https://github.com/user-attachments/assets/2857cbb5-1fb5-4bf9-ad1d-fca79ff87e25" />
+
+#Penerapan JDBC
+
+Salah satu contoh penerapan JDBC pada sistem ditunjukkan pada proses penyimpanan data pencucian ke dalam database. Pada kode tersebut, Connection digunakan untuk menghubungkan program dengan database melalui Koneksi.getConnection(), sedangkan PreparedStatement digunakan untuk menyiapkan perintah SQL dan memasukkan data menggunakan ps.setString(), ps.setInt(), dan ps.setDouble(). Selanjutnya, ps.executeUpdate() digunakan untuk menjalankan perintah SQL sehingga data dapat disimpan ke dalam database.
+
+<img width="508" height="565" alt="Screenshot 2026-10-13 113744" src="https://github.com/user-attachments/assets/bbb3e84d-112d-46ba-ba7b-4abba5205004" />
+
+
+  
