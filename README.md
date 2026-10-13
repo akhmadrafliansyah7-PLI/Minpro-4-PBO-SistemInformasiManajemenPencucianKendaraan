@@ -58,7 +58,7 @@ proses pencucisn, dan keluar dari program. Pengguna dapat memilih salah satu men
 
 3. Ubah Data Pencucian
 
-   Pada menu **Ubah Data Pencucian**, pengguna dapat memperbarui data transaksi yang sudah tersimpan dengan memasukkan ID transaksi yang ingin       diubah. Data yang dapat diperbarui meliputi informasi pelanggan, kendaraan, jenis kendaraan, serta layanan pencucian. Setelah seluruh data        baru dimasukkan, sistem akan memperbarui transaksi dan menampilkan pemberitahuan bahwa data berhasil diubah.
+   Pada menu **Ubah Data Pencucian**, pengguna dapat memperbarui data transaksi yang sudah tersimpan dengan memasukkan ID transaksi yang    ingin diubah. Data yang dapat diperbarui meliputi informasi pelanggan, kendaraan, jenis kendaraan, serta layanan pencucian. Setelah      seluruh data baru dimasukkan, sistem akan memperbarui transaksi dan menampilkan pemberitahuan bahwa data berhasil diubah.
 
     <img width="260" height="629" alt="Screenshot 2026-10-07 095845" src="https://github.com/user-attachments/assets/13151e38-e46b-4362-adf0-ab2a071589b0" />
 
